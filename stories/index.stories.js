@@ -8,7 +8,7 @@ import { linkTo } from '@storybook/addon-links';
 import { Button, Welcome } from '@storybook/react/demo';
 
 import { PopoverWrapper, Popover } from '../src/index.js';
-// import styled from 'emotion';
+import styled, { css} from 'styled-components';
 
 class App extends React.Component {
   menuClick(e) {
@@ -18,7 +18,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <PopoverWrapper className="box">
+      <PopoverWrapper className="box" style={{marginTop: '50px'}}>
         <p>Your "trigger" can be anything you want: a simple text or html: <Popover trigger="open above" position="top">lorem ipsum...</Popover></p>
         <div>You can use complex html for the popover content:
           <Popover className="menu" trigger={<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28"><path d="M24 21v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703zM24 13v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703zM24 5v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703z"></path></svg>} position="bottom">

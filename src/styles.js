@@ -9,71 +9,18 @@ export const PopoverElement = styled.div`
   display: inline-flex;
   box-sizing: border-box;
 
-  &.popover--top {
+  ${props => props.position === 'top' && `
     flex-flow: column-reverse nowrap;
-
-    .popover__content {
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%) translateY(-6px);
-
-      &::before {
-        border-top-color: #000;
-        bottom: -4px;
-        transform: translateX(-50%) translateY(8px);
-        left: 50%;
-      }
-    }
-  }
-
-  &.popover--bottom {
+  `}
+  ${props => props.position === 'bottom' && `
     flex-flow: column nowrap;
-
-    .popover__content {
-      left: 50%;
-      transform: translateX(-50%) translateY(6px);
-
-      &::before {
-        border-bottom-color: #000;
-        top: -20px;
-        transform: translateX(-50%) translateY(8px);
-        left: 50%;
-      }
-    }
-  }
-
-  &.popover--left {
+  `}
+  ${props => props.position === 'left' && `
     flex-flow: row-reverse nowrap;
-
-    .popover__content {
-      top: 50%;
-      transform: translateY(-50%) translateX(-100%);
-
-      &::before {
-        border-left-color: #000;
-        right: -6px;
-        transform: translateX(50%) translateY(-6px);
-        top: 50%;
-      }
-    }
-  }
-
-  &.popover--right {
+  `}
+  ${props => props.position === 'right' && `
     flex-flow: row nowrap;
-
-    .popover__content {
-      top: 50%;
-      transform: translateY(-50%) translateX(6px);
-
-      &::before {
-        border-right-color: #000;
-        left: -6px;
-        transform: translateX(-50%) translateY(-6px);
-        top: 50%;
-      }
-    }
-  }
-
+  `}
 `;
 
 export const PopoverContent = styled.div`
@@ -90,6 +37,54 @@ export const PopoverContent = styled.div`
   background-color: #000;
   color: #fff;
   padding: 5px;
+
+  ${props => props.position === 'top' && `
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) translateY(-6px);
+
+      &::before {
+        border-top-color: #000;
+        bottom: -4px;
+        transform: translateX(-50%) translateY(8px);
+        left: 50%;
+  `}
+
+  ${props => props.position === 'bottom' && `
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+
+      &::before {
+        border-bottom-color: #000;
+        top: -20px;
+        transform: translateX(-50%) translateY(8px);
+        left: 50%;
+      }
+  `}
+
+  ${props => props.position === 'left' && `
+      top: 50%;
+      transform: translateY(-50%) translateX(-100%);
+
+      &::before {
+        border-left-color: #000;
+        right: -6px;
+        transform: translateX(50%) translateY(-6px);
+        top: 50%;
+      }
+  `}
+
+  ${props => props.position === 'right' && `
+      top: 50%;
+      transform: translateY(-50%) translateX(6px);
+
+      &::before {
+        border-right-color: #000;
+        left: -6px;
+        transform: translateX(-50%) translateY(-6px);
+        top: 50%;
+      }
+  `}
 
   ${props => props.active && `
       visibility: visible;

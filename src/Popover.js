@@ -58,9 +58,9 @@ export default class Popover extends React.PureComponent {
     const { position, trigger } = this.props;
     const { isPopoverShown } = this.state;
     return (
-      <PopoverElement position={position}>
+      <PopoverElement position={position} active={isPopoverShown}>
         <PopoverTrigger href='' onClick={this.toggle}>{trigger}</PopoverTrigger>
-        <PopoverContent active={isPopoverShown}>{this.props.children}</PopoverContent>
+        <PopoverContent position={position} active={isPopoverShown}>{this.props.children}</PopoverContent>
       </PopoverElement>
     );
   }
