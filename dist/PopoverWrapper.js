@@ -17,6 +17,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _PopoverStore = require("./PopoverStore");
 
+import { jsx as ___EmotionJSX } from "@emotion/core";
+
 class PopoverWrapper extends _react.default.PureComponent {
   hidePopovers() {
     _PopoverStore.popoverStore.hide();

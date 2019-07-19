@@ -10,7 +10,8 @@
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "size": "npm run build && size-limit"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,8 @@
     "emotion": "^10.0.14",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "semantic-release": "^15.13.18"
+    "semantic-release": "^15.13.18",
+    "size-limit": "^1.3.7"
   },
   "peerDependencies": {},
   "keywords": [
@@ -49,5 +51,11 @@
     "popover",
     "popopo"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "size-limit": [
+    {
+      "path": "dist/*.js",
+      "limit": "500 ms"
+    }
+  ]
 }

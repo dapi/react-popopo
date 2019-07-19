@@ -19,6 +19,8 @@ var _PopoverStore = require("./PopoverStore");
 
 var _styles = require("./styles");
 
+import { jsx as ___EmotionJSX } from "@emotion/core";
+
 class Popover extends _react.default.PureComponent {
   constructor() {
     super(...arguments);
@@ -70,7 +72,7 @@ class Popover extends _react.default.PureComponent {
     var {
       isPopoverShown
     } = this.state;
-    return _react.default.createElement(_styles.PopoverElement, {
+    return _react.default.createElement(_styles.PopoverContainer, {
       position: position,
       active: isPopoverShown
     }, _react.default.createElement(_styles.PopoverTrigger, {
