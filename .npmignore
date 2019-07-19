@@ -1,9 +1,3 @@
-/demo
 /.idea
 /.vscode
-/_site
-/.sass-cache
-/src
-/.babelrc
 /.eslintrc
-/webpack.config.js
