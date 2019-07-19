@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { popoverStore } from './PopoverStore';
-import { PopoverElement, PopoverTrigger, PopoverContent } from './styles';
+import { PopoverContainer, PopoverTrigger, PopoverContent } from './styles';
 
 export default class Popover extends React.PureComponent {
   static propTypes = {
@@ -58,10 +58,10 @@ export default class Popover extends React.PureComponent {
     const { position, trigger } = this.props;
     const { isPopoverShown } = this.state;
     return (
-      <PopoverElement position={position} active={isPopoverShown}>
+      <PopoverContainer position={position} active={isPopoverShown}>
         <PopoverTrigger href='' onClick={this.toggle}>{trigger}</PopoverTrigger>
         <PopoverContent position={position} active={isPopoverShown}>{this.props.children}</PopoverContent>
-      </PopoverElement>
+      </PopoverContainer>
     );
   }
 }

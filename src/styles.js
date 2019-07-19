@@ -1,10 +1,11 @@
-import styled, { css} from 'styled-components';
-//import styled from '@emotion/styled'
+//import styled, { css} from 'styled-components';
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 
 export const PopoverTrigger = styled.a`
 `;
 
-export const PopoverElement = styled.div`
+export const PopoverContainer = styled.div`
   position: relative;
   display: inline-flex;
   box-sizing: border-box;

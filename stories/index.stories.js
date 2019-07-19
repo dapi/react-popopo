@@ -8,7 +8,6 @@ import { linkTo } from '@storybook/addon-links';
 import { Button, Welcome } from '@storybook/react/demo';
 
 import { PopoverWrapper, Popover } from '../src/index.js';
-import styled, { css} from 'styled-components';
 
 class App extends React.Component {
   menuClick(e) {

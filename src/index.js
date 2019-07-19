@@ -1,7 +1,3 @@
-import Popover from './Popover';
-import PopoverWrapper from './PopoverWrapper';
-
-export {
-  Popover,
-  PopoverWrapper
-}
+export { default as Popover } from './Popover';
+export { default as PopoverWrapper } from './PopoverWrapper';
+export { PopoverContainer, PopoverTrigger, PopoverContent } from './styles';
