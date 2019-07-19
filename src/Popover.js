@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { popoverStore } from './PopoverStore';
-import { PopoverContainer, PopoverTrigger, PopoverContent } from './styles';
+import {
+  PopoverContainer as PopoverContainerDefault,
+  PopoverTrigger as PopoverTriggerDefault,
+  PopoverContent as PopoverContentDefault
+} from './styles';
 
 export default class Popover extends React.PureComponent {
   static propTypes = {
@@ -11,6 +15,9 @@ export default class Popover extends React.PureComponent {
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
     onShow: PropTypes.func,
     onHide: PropTypes.func,
+    PopoverContainer: PropTypes.node,
+    PopoverTrigger: PropTypes.node,
+    PopoverContent: PropTypes.node,
   };
 
   static defaultProps = {
@@ -18,6 +25,9 @@ export default class Popover extends React.PureComponent {
     position: 'top',
     onShow: undefined,
     onHide: undefined,
+    PopoverContainer: PopoverContainerDefault,
+    PopoverTrigger: PopoverTriggerDefault,
+    PopoverContent: PopoverContentDefault
   };
 
   state = {
@@ -55,9 +65,8 @@ export default class Popover extends React.PureComponent {
   };
 
   render() {
-    const { position, trigger } = this.props;
+    const { position, trigger, PopoverContent, PopoverTrigger, PopoverContainer } = this.props;
     const { isPopoverShown } = this.state;
-    console.log('position', position, isPopoverShown);
     return (
       <PopoverContainer position={position} active={isPopoverShown}>
         <PopoverTrigger href='' onClick={this.toggle}>{trigger}</PopoverTrigger>
