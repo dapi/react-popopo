@@ -1,8 +1,9 @@
 .DS_Store
 node_modules
 npm-debug.log
-static
-/.idea
-/.vscode
-/_site
-/.sass-cache
+*.log
+.DS_Store
+coverage
+.idea
+npm-debug.log
+dist/
