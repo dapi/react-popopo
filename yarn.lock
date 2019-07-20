@@ -1079,7 +1079,7 @@
     "@emotion/serialize" "^0.11.8"
     "@emotion/utils" "0.11.2"
 
-"@emotion/styled@^10.0.14", "@emotion/styled@^10.0.7":
+"@emotion/styled@^10.0.7":
   version "10.0.14"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.14.tgz#538bcf0d67bf8f6de946bcfbee53dc7d0187b346"
   integrity sha512-Ae8d5N/FmjvZKXjqWcjfhZhjCdkvxZSqD95Q72BYDNQnsOKLHIA4vWlMolLXDNkw1dIxV3l2pp82Z87HXj6eYQ==
@@ -3813,16 +3813,6 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
-create-emotion@^10.0.14:
-  version "10.0.14"
-  resolved "https://registry.yarnpkg.com/create-emotion/-/create-emotion-10.0.14.tgz#4c140aaef6a9588ed47c926f9c4679e4719be43e"
-  integrity sha512-5G4naKMxokOur+94eDz7iPKBfwzy4wa/+0isnPhxXyosIQHBq7yvBy4jjdZw/nnRm7G3PM7P9Ug8mUmtoqcaHg==
-  dependencies:
-    "@emotion/cache" "^10.0.14"
-    "@emotion/serialize" "^0.11.8"
-    "@emotion/sheet" "0.9.3"
-    "@emotion/utils" "0.11.2"
-
 create-error-class@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
@@ -4586,14 +4576,6 @@ emotion-theming@^10.0.10, emotion-theming@^10.0.9:
     "@babel/runtime" "^7.4.3"
     "@emotion/weak-memoize" "0.2.3"
     hoist-non-react-statics "^3.3.0"
-
-emotion@^10.0.14:
-  version "10.0.14"
-  resolved "https://registry.yarnpkg.com/emotion/-/emotion-10.0.14.tgz#d7702a6147de6e8ce863dacde98418a467c5fed4"
-  integrity sha512-6cTWfwqVGy9UinGSZQKRGyuRsRGkzlT0MaeH2pF4BvL7u6PnyTZeyHj4INwzpaXBLwA9C0JaFqS31J62RWUNNw==
-  dependencies:
-    babel-plugin-emotion "^10.0.14"
-    create-emotion "^10.0.14"
 
 encodeurl@~1.0.2:
   version "1.0.2"
