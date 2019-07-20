@@ -34,6 +34,11 @@ class MyComponent extends React.Component {
     );
 ```
 
+
+## Alternatives
+
+* https://github.com/littlebits/react-popover
+
 ## License
 
 [The MIT License](./LICENSE)
