@@ -1,8 +1,8 @@
 {
   "name": "react-popopo",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Smart popover component for React. Closes when you click away, no need to reclick the trigger button to close it",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist --copy-files",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
