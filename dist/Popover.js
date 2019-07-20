@@ -67,18 +67,21 @@ class Popover extends _react.default.PureComponent {
   render() {
     var {
       position,
-      trigger
+      trigger,
+      PopoverContent,
+      PopoverTrigger,
+      PopoverContainer
     } = this.props;
     var {
       isPopoverShown
     } = this.state;
-    return _react.default.createElement(_styles.PopoverContainer, {
+    return _react.default.createElement(PopoverContainer, {
       position: position,
       active: isPopoverShown
-    }, _react.default.createElement(_styles.PopoverTrigger, {
+    }, _react.default.createElement(PopoverTrigger, {
       href: "",
       onClick: this.toggle
-    }, trigger), _react.default.createElement(_styles.PopoverContent, {
+    }, trigger), _react.default.createElement(PopoverContent, {
       position: position,
       active: isPopoverShown
     }, this.props.children));
@@ -92,11 +95,17 @@ exports.default = Popover;
   trigger: _propTypes.default.any.isRequired,
   position: _propTypes.default.oneOf(['top', 'right', 'bottom', 'left']),
   onShow: _propTypes.default.func,
-  onHide: _propTypes.default.func
+  onHide: _propTypes.default.func,
+  PopoverContainer: _propTypes.default.node,
+  PopoverTrigger: _propTypes.default.node,
+  PopoverContent: _propTypes.default.node
 });
 (0, _defineProperty2.default)(Popover, "defaultProps", {
   children: [],
   position: 'top',
   onShow: undefined,
-  onHide: undefined
+  onHide: undefined,
+  PopoverContainer: _styles.PopoverContainer,
+  PopoverTrigger: _styles.PopoverTrigger,
+  PopoverContent: _styles.PopoverContent
 });
