@@ -15,9 +15,9 @@ export default class Popover extends React.PureComponent {
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
     onShow: PropTypes.func,
     onHide: PropTypes.func,
-    PopoverContainer: PropTypes.node,
-    PopoverTrigger: PropTypes.node,
-    PopoverContent: PropTypes.node,
+    PopoverContainer: PropTypes.elementType,
+    PopoverTrigger: PropTypes.elementType,
+    PopoverContent: PropTypes.elementType,
   };
 
   static defaultProps = {
