@@ -7,13 +7,13 @@ For full docs and demo see https://dapi.github.io/react-popopo/
 ## Installation
 
 ```bash
-npm i react-popover -S
+npm i react-popopo -S
 ```
 
 or 
 
 ```bash
-yarn add react-popover
+yarn add react-popopo
 ```
 
 ## Usage
@@ -21,9 +21,6 @@ yarn add react-popover
 ```javascript
 import React from 'react';
 import Popover from 'react-popopo';
-
-// optional, you can bring your own styles if you want
-import '@terebentina/react-popover/lib/styles.css';
 
 class MyComponent extends React.Component {
  render() {
