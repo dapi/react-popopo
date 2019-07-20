@@ -1,10 +1,6 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-
-import { Button, Welcome } from '@storybook/react/demo';
 
 import {
   PopoverWrapper,
@@ -14,10 +10,9 @@ import {
   PopoverTrigger
 } from '../src/index.js';
 
-import { Global, css } from '@emotion/core';
-import styled from '@emotion/styled';
+import styled, { css, createGlobalStyle } from 'styled-components'
 
-const GlobalCSS = css`
+const GlobalStyle = createGlobalStyle`
   .beta {
     position: absolute;
     right: -13px;
@@ -96,7 +91,7 @@ class App extends React.Component {
   render() {
     return (
       <PopoverWrapper className="box" style={{marginTop: '50px'}}>
-        <Global styles={GlobalCSS} />
+        <GlobalStyle />
         <div>You can use complex html for the popover content:
           <Popover className="menu" trigger={Trigger} position="bottom" PopoverContent={MenuPopoverContent} PopoverTrigger={MenuPopoverTrigger}>
             <a href="#" onClick={this.menuClick}>Profile</a>
