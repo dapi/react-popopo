@@ -1,6 +1,6 @@
 # react-popopo
 
-Smart popover component for React. Closes when you click away, no need to reclick the trigger button to close it.
+Smart popover component for React. Closes when you click away, no need to reclick the trigger button to close it. Uses `styled-components`.
 
 For full docs and demo see https://dapi.github.io/react-popopo/
 
@@ -43,5 +43,5 @@ class MyComponent extends React.Component {
 
 [The MIT License](./LICENSE)
 
-Copyright (c) 2019 Danil Pismenny
-Copyright (c) 2016 Dan Caragea
+* Copyright (c) 2019 Danil Pismenny
+* Copyright (c) 2016 Dan Caragea

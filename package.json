@@ -22,7 +22,12 @@
     "type": "git",
     "url": "https://github.com/dapi/react-popopo.git"
   },
-  "author": "Danil Pismenny <danil@brandymint.ru>",
+  "author": "Dan Caragea <dancaragea@gmail.com>",
+  "contributors": [
+    "name": "Danil Pismenny",
+    "email": "danil@brandymint.ru",
+    "url": "https://github.com/dapi"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
