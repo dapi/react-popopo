@@ -24,9 +24,11 @@
   },
   "author": "Dan Caragea <dancaragea@gmail.com>",
   "contributors": [
-    "name": "Danil Pismenny",
-    "email": "danil@brandymint.ru",
-    "url": "https://github.com/dapi"
+    {
+      "name": "Danil Pismenny",
+      "email": "danil@brandymint.ru",
+      "url": "https://github.com/dapi"
+    }
   ],
   "license": "MIT",
   "devDependencies": {
