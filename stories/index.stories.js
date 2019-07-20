@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
@@ -98,7 +97,6 @@ class App extends React.Component {
     return (
       <PopoverWrapper className="box" style={{marginTop: '50px'}}>
         <Global styles={GlobalCSS} />
-        <div>Your "trigger" can be anything you want: a simple text or html: <Popover trigger="open above" position="top">lorem ipsum...</Popover></div>
         <div>You can use complex html for the popover content:
           <Popover className="menu" trigger={Trigger} position="bottom" PopoverContent={MenuPopoverContent} PopoverTrigger={MenuPopoverTrigger}>
             <a href="#" onClick={this.menuClick}>Profile</a>
@@ -118,15 +116,23 @@ class App extends React.Component {
   }
 }
 
-storiesOf('App', module).
-  add('App', () => <App />);
+class Positioning extends React.Component {
+  render() {
+    return (
+      <PopoverWrapper className="box" style={{marginTop: '50px'}}>
+        <h2>Top</h2>
+        <div>Your "trigger" can be anything you want: a simple text or html: <Popover trigger="open above" position='top'>lorem ipsum...</Popover></div>
+        <h2>Right</h2>
+        <div>Your "trigger" can be anything you want: a simple text or html: <Popover trigger="open above" position='right'>lorem ipsum...</Popover></div>
+        <h2>Left</h2>
+        <div>Your "trigger" can be anything you want: a simple text or html: <Popover trigger="open above" position='left'>lorem ipsum...</Popover></div>
+        <h2>Bottom</h2>
+        <div>Your "trigger" can be anything you want: a simple text or html: <Popover trigger="open above" position='bottom'>lorem ipsum...</Popover></div>
+      </PopoverWrapper>
+    );
+  }
+}
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+storiesOf('Examples', module).
+  add('Positioning', () => <Positioning />).
+  add('Other', () => <App />);
